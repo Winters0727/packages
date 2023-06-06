@@ -3,7 +3,7 @@ export const useMergeSort = () => {
     return [];
   };
 
-  const mergeValues = (arr: number[]) => {
+  const mergeValues = (arr1: number[], arr2: number[]) => {
     return [];
   };
 
