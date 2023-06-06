@@ -11,11 +11,25 @@ type MergeSort = {
 
 export const useBubbleSort: () => BubbleSort = () => {
   const swap = (arr: number[], index1: number, index2: number) => {
-    return [];
+    const copiedArray = arr.slice();
+    copiedArray[index1] = arr[index2];
+    copiedArray[index2] = arr[index1];
+
+    return copiedArray;
   };
 
   const bubbleSort = (arr: number[]) => {
-    return [];
+    let result = arr.slice();
+
+    for (let i = 0; i < arr.length - 1; i++) {
+      for (let j = i + 1; j < arr.length; j++) {
+        if (result[i] > result[j]) {
+          result = swap(result, i, j);
+        }
+      }
+    }
+
+    return result;
   };
 
   return {
