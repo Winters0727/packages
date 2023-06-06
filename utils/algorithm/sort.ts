@@ -1,8 +1,28 @@
-interface MergeSort {
+type BubbleSort = {
+  swap: (arr: number[], index1: number, index2: number) => number[];
+  bubbleSort: (arr: number[]) => number[];
+};
+
+type MergeSort = {
   mergeValues: (arr1: number[], arr2: number[]) => number[];
   divideValues: (arr: number[]) => [number[], number[]];
   mergeSort: (arr: number[]) => number[];
-}
+};
+
+export const useBubbleSort: () => BubbleSort = () => {
+  const swap = (arr: number[], index1: number, index2: number) => {
+    return [];
+  };
+
+  const bubbleSort = (arr: number[]) => {
+    return [];
+  };
+
+  return {
+    swap,
+    bubbleSort,
+  };
+};
 
 export const useMergeSort: () => MergeSort = () => {
   const mergeValues = (arr1: number[], arr2: number[]) => {
